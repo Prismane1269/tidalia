@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Archive — Tidalia</title>
+<meta name="description" content="Nine reference soundtracks from the six Tidalia realms, plus everything you have saved in this browser. Press play and each one is synthesised live.">
+<meta name="theme-color" content="#04070f">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-mark">Tidalia</div>
+    <div class="loader-bar"><i></i></div>
+    <div class="loader-pct">00%</div>
+    <div class="loader-hint">cataloguing the lagoon…</div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav__in">
+    <a class="brand" href="index.html" data-nav aria-label="Tidalia — home">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span>Tidalia<small>Generative music studio</small></span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="index.html" data-nav>Home</a>
+      <a href="index.html#realms">Realms</a>
+      <a href="composer.html" data-nav>Composer</a>
+      <a href="archive.html" data-nav aria-current="page">Archive</a>
+    </nav>
+    <div class="nav__cta">
+      <a class="btn btn--primary btn--sm" href="composer.html" data-nav data-magnetic><span class="dot"></span>Compose</a>
+      <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="sheet" id="sheet">
+  <div class="wrap">
+    <a href="index.html" data-nav>Home</a>
+    <a href="index.html#realms">Realms</a>
+    <a href="composer.html" data-nav>Composer</a>
+    <a href="archive.html" data-nav>Archive</a>
+    <a class="btn btn--primary" href="composer.html" data-nav>Compose a new tide</a>
+  </div>
+</div>
+
+<main>
+  <section class="page-head">
+    <div class="wrap">
+      <div class="crumbs"><a href="index.html" data-nav>Home</a><span>/</span><span>Archive</span></div>
+      <div class="archive-head">
+        <div>
+          <p class="eyebrow">Exploration archive</p>
+          <h1 class="display" data-split>Every tide you’ve <span class="serif grad-text">sailed past.</span></h1>
+          <p class="lede" style="margin-top:20px">Nine reference soundtracks from the six realms, plus every prompt you have saved. Press play — each track is arranged in your browser the moment you ask for it.</p>
+        </div>
+        <div style="text-align:right">
+          <p class="small" style="margin:0"><b id="archive-count">9 tracks</b></p>
+          <p class="small" style="margin:6px 0 0">Saved in this browser · <span data-store-count>0</span></p>
+        </div>
+      </div>
+
+      <div class="filters" role="tablist" aria-label="Filter by realm">
+        <button class="chip is-active" data-filter="all">All realms</button>
+        <button class="chip" data-filter="reef">Reef of Echoes</button>
+        <button class="chip" data-filter="chrome">Chrome Desert</button>
+        <button class="chip" data-filter="lantern">Lantern Sea</button>
+        <button class="chip" data-filter="ice">Ice Cathedral</button>
+        <button class="chip" data-filter="jungle">Midnight Jungle</button>
+        <button class="chip" data-filter="lagoon">Cassette Lagoon</button>
+      </div>
+
+      <div class="grid grid--3" id="archive-grid"></div>
+      <div class="archive-empty" id="archive-empty" hidden>
+        Nothing here yet. Try another realm, or <a href="composer.html" data-nav style="color:var(--cyan)">compose something new</a>.
+      </div>
+
+      <div class="grid grid--2" style="margin-top:44px;align-items:center">
+        <div class="page-note" data-reveal>
+          <span aria-hidden="true">◍</span>
+          <p style="margin:0"><b>One player at a time.</b> Press play on any card and the previous track stops — every piece is generated from its own seed, so no two loops are identical.</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end">
+          <button class="btn" id="archive-more" data-magnetic>Improvise a one-off take</button>
+          <a class="btn btn--primary" href="composer.html" data-nav data-magnetic><span class="dot"></span>Compose a new tide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="index.html" data-nav>
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span>Tidalia<small>Generative music studio</small></span>
+        </a>
+        <p class="small" style="max-width:34ch">The archive holds the reference catalogue and your own saves — all of it local, all of it replayable.</p>
+      </div>
+      <div>
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="composer.html" data-nav>Composer</a></li>
+          <li><a href="archive.html" data-nav>Archive</a></li>
+          <li><a href="index.html#realms">Realms</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Realms</h4>
+        <ul>
+          <li><a href="index.html#realms">All six realms</a></li>
+          <li><a href="composer.html?realm=chrome" data-nav>Chrome Desert</a></li>
+          <li><a href="composer.html?realm=jungle" data-nav>Midnight Jungle</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>The journey</h4>
+        <ul>
+          <li><a href="index.html#hero">The descent</a></li>
+          <li><a href="index.html#imagination">Hover reveal demo</a></li>
+          <li><a href="index.html#finale">The conductor</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> Tidalia — a demo studio built with Three.js + WebAudio.</span>
+      <span class="status"><i></i>Archive synced locally</span>
+    </div>
+  </div>
+</footer>
+
+<button class="sound" id="sound-toggle" aria-pressed="false" aria-label="Toggle the ambient soundtrack">
+  <span class="sound__icon">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h3.2L12 19V5L7.2 9H4zm11.5-1.4a5.5 5.5 0 010 8.8v-1.9a3.6 3.6 0 000-5v-1.9zm2.6-2.5a9 9 0 010 13.8v-1.9a7.1 7.1 0 000-10V5.1z"/></svg>
+  </span>
+  <span class="sound__label">Sound off</span>
+  <span class="sound__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+</button>
+
+<script src="js/core.js"></script>
+<script src="js/config.js"></script>
+<script src="js/cursor.js"></script>
+<script src="js/reveals.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/pages.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

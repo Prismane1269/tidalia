@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tidalia — Compose the ocean inside your head</title>
+<meta name="description" content="Tidalia is a cinematic AI music studio. Scroll through a real-time 3D descent, explore six generative realms, and turn a feeling into an original soundtrack — synthesised live in your browser.">
+<meta name="theme-color" content="#04070f">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="preload" as="image" href="assets/hero_night.jpg">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- ============================================================ loader -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-mark">Tidalia</div>
+    <div class="loader-bar"><i></i></div>
+    <div class="loader-pct">00%</div>
+    <div class="loader-hint">calibrating the tide…</div>
+  </div>
+</div>
+
+<!-- ============================================================ nav -->
+<header class="nav">
+  <div class="nav__in">
+    <a class="brand" href="index.html" data-nav aria-label="Tidalia — home">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span>Tidalia<small>Generative music studio</small></span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="index.html" data-nav aria-current="page">Home</a>
+      <a href="#realms">Realms</a>
+      <a href="composer.html" data-nav>Composer</a>
+      <a href="archive.html" data-nav>Archive</a>
+    </nav>
+    <div class="nav__cta">
+      <a class="btn btn--primary btn--sm" href="composer.html" data-nav data-magnetic><span class="dot"></span>Start composing</a>
+      <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="sheet" id="sheet">
+  <div class="wrap">
+    <a href="index.html" data-nav>Home</a>
+    <a href="#realms">Realms</a>
+    <a href="composer.html" data-nav>Composer</a>
+    <a href="archive.html" data-nav>Archive</a>
+    <a class="btn btn--primary" href="composer.html" data-nav>Start composing</a>
+  </div>
+</div>
+
+<main>
+  <!-- ========================================================== hero / journey -->
+  <section id="hero" class="journey" style="--journey-len:620vh">
+    <div class="journey__sticky">
+      <div class="journey__frame" id="journey-frame">
+        <canvas id="journey-canvas" aria-hidden="true"></canvas>
+        <div class="vignette"></div>
+        <div class="grain"></div>
+      </div>
+
+      <div class="journey__ui">
+        <div class="hero-brand">
+          <p class="eyebrow">Tidalia · a generative music studio</p>
+          <h1 class="display" data-split data-reveal-after-load>Compose the ocean <span class="serif grad-text">inside your head.</span></h1>
+          <p class="hero-lede">Describe a feeling, a memory, an imaginary world. Tidalia turns it into an original soundtrack — synthesised live, never sampled.</p>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="composer.html" data-nav data-magnetic><span class="dot"></span>Open the composer</a>
+          <a class="btn" href="#realms" data-magnetic>Enter the realms</a>
+        </div>
+
+        <div class="hero-meta">
+          <span>Scroll-scrubbed 3D</span><span>Zero video files</span><span>Synthesised in real time</span>
+        </div>
+
+        <!-- scroll-scrubbed story captions -->
+        <div class="chapter" data-side="left">
+          <span class="chapter__no">01 — The descent</span>
+          <h3>Every track starts below the surface.</h3>
+          <p>A record spinning in the dark, four kilometres down. This is where the first note lives.</p>
+        </div>
+        <div class="chapter" data-side="right">
+          <span class="chapter__no">02 — Memory, pressed into vinyl</span>
+          <h3>A feeling you can’t name becomes a waveform.</h3>
+          <p>Tidalia keeps the texture — the hiss, the warmth, the weight of the needle.</p>
+        </div>
+        <div class="chapter" data-side="left">
+          <span class="chapter__no">03 — Then it learns the tide</span>
+          <h3>Instruments enter the way water does.</h3>
+          <p>Not all at once. Inevitably. Pads swell, sub-bass rolls, and a choir shows up from three rooms away.</p>
+        </div>
+        <div class="chapter" data-side="right">
+          <span class="chapter__no">04 — Arrival</span>
+          <h3>And you arrive somewhere that never existed.</h3>
+          <p>Six realms. Infinite arrangements. One lagoon that is only yours.</p>
+        </div>
+
+        <div class="journey-card">
+          <b>One continuous shot</b>
+          <span>26 frames · scrubbed by your scroll · 0 MB of video</span>
+        </div>
+
+        <div class="journey-progress" aria-hidden="true">
+          <i class="is-on"></i><i></i><i></i><i></i><i></i>
+        </div>
+
+        <div class="scroll-cue"><span>Scroll</span><i></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== manifesto -->
+  <section id="manifesto" class="section manifesto">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <p class="eyebrow">01 — The studio</p>
+          <p data-split data-reveal>We don’t sample the sea. <span class="serif grad-text">We synthesise it</span> — note by note, tide by tide.</p>
+        </div>
+        <div>
+          <p class="lead" data-reveal data-reveal-delay="0.15">Every sound you hear on this page is generated in your browser from oscillators, filters and a little nerve. Describe the mood; Tidalia handles the arrangement, the tempo, the key, and the reverb tail that outlives the song.</p>
+          <div class="stats" data-reveal-group>
+            <div class="stat" data-reveal-item><b>0</b><span>Audio files shipped</span></div>
+            <div class="stat" data-reveal-item><b>6</b><span>Generative realms</span></div>
+            <div class="stat" data-reveal-item><b>∞</b><span>Arrangements per prompt</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid--3" style="margin-top:64px">
+        <article class="card card--glass" data-tilt data-reveal data-reveal-delay="0.05">
+          <div class="card__glow"></div>
+          <div class="tilt-in">
+            <p class="eyebrow" style="margin-bottom:10px">Reactive vinyl</p>
+            <h3 class="h3">A record that listens back</h3>
+            <p class="small" style="margin-top:10px">Feed Tidalia a mood and the disc starts turning. Its spectrum ring is driven by the live analyser — move your cursor and the mix breathes with you.</p>
+          </div>
+        </article>
+        <article class="card card--glass" data-tilt data-reveal data-reveal-delay="0.12">
+          <div class="card__glow"></div>
+          <div class="tilt-in">
+            <p class="eyebrow" style="margin-bottom:10px">Real-time synthesis</p>
+            <h3 class="h3">Music with no loading bar</h3>
+            <p class="small" style="margin-top:10px">Pads, sub, percussion and shimmer are scheduled from a seed, so your soundtrack is unique, instant, and tiny. No 40 MB loops, no buffering.</p>
+          </div>
+        </article>
+        <article class="card card--glass" data-tilt data-reveal data-reveal-delay="0.19">
+          <div class="card__glow"></div>
+          <div class="tilt-in">
+            <p class="eyebrow" style="margin-bottom:10px">Remix forever</p>
+            <h3 class="h3">Prompt again, hear something else</h3>
+            <p class="small" style="margin-top:10px">Same feeling, new arrangement. Save the ones you love into your archive, then send them to the composer for another tide.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ========================================================== composer teaser -->
+  <section id="composer" class="section">
+    <div class="wrap">
+      <div class="compose-grid">
+        <div data-reveal>
+          <p class="eyebrow">02 — Describe a feeling</p>
+          <h2 class="h2" data-split>A sentence in, <span class="serif grad-text">a soundtrack out.</span></h2>
+          <p class="lead" style="margin-top:18px">Start here, or go straight to the full studio. Either way, Tidalia reads your words, picks a realm, a key and a tempo, then composes.</p>
+          <form id="teaser-form" style="margin-top:26px">
+            <div class="field">
+              <textarea class="prompt" name="prompt" placeholder="a rainstorm remembered through a car window, slow, warm, a little sad" maxlength="240" aria-label="Describe the soundtrack you want"></textarea>
+              <div class="prompt-foot">
+                <button class="btn btn--primary" type="submit" data-magnetic><span class="dot"></span>Compose this</button>
+                <span class="count" style="margin-left:auto"></span>
+              </div>
+            </div>
+          </form>
+          <p class="small" style="margin-top:14px">You’ll land in the full composer with your words already loaded.</p>
+        </div>
+        <div data-reveal data-reveal-delay="0.12">
+          <div class="orb-wrap">
+            <canvas id="orb-canvas" aria-hidden="true"></canvas>
+            <div class="orb-badge"><i></i>Live synthesis engine</div>
+            <div class="orb-note"><span>Side A · 33⅓</span><span>Tidalia mastering room</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== realms carousel -->
+  <section id="realms" class="realms" style="--realms-len:340vh">
+    <div class="realms__sticky">
+      <div class="realms__bg" data-realms-bg="0" style="background-image:url('assets/realms/reef.jpg')"></div>
+      <div class="realms__bg" data-realms-bg="1" style="background-image:url('assets/realms/chrome.jpg')"></div>
+      <div class="realms__bg" data-realms-bg="2" style="background-image:url('assets/realms/lantern.jpg')"></div>
+      <div class="realms__bg" data-realms-bg="3" style="background-image:url('assets/realms/ice.jpg')"></div>
+      <div class="realms__bg" data-realms-bg="4" style="background-image:url('assets/realms/jungle.jpg')"></div>
+      <div class="realms__bg" data-realms-bg="5" style="background-image:url('assets/realms/lagoon.jpg')"></div>
+      <div class="realms__veil"></div>
+      <div class="realms__canvas"><canvas id="realms-canvas" aria-label="Interactive 3D carousel of the six Tidalia realms"></canvas></div>
+      <div class="grain"></div>
+
+      <div class="realms__ui">
+        <div class="realms__panel" id="realm-panel">
+          <p class="realm__index"><span data-realm-index>01 / 06</span></p>
+          <h2 class="realm__name" data-realm-name>Reef of Echoes</h2>
+          <p class="realm__desc" data-realm-desc>A drowned city of coral pipes.</p>
+          <div class="realm__tags" data-realm-tags></div>
+          <p class="small" style="margin-top:12px" data-realm-meta></p>
+          <div class="realm__actions">
+            <button class="btn btn--primary" data-open-realm><span class="dot"></span>Open realm</button>
+            <a class="btn" href="composer.html?realm=reef" data-nav>Compose here</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="realms__nav">
+        <button class="icon-btn" data-realm-prev aria-label="Previous realm">
+          <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <div class="realms__dots" role="tablist" aria-label="Realms">
+          <button data-realm-dot aria-label="Realm 1"></button>
+          <button data-realm-dot aria-label="Realm 2"></button>
+          <button data-realm-dot aria-label="Realm 3"></button>
+          <button data-realm-dot aria-label="Realm 4"></button>
+          <button data-realm-dot aria-label="Realm 5"></button>
+          <button data-realm-dot aria-label="Realm 6"></button>
+        </div>
+        <button class="icon-btn" data-realm-next aria-label="Next realm">
+          <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+        <span class="realms__hint">scroll · drag · click a card</span>
+      </div>
+      <div class="realm__prog"></div>
+    </div>
+  </section>
+
+  <!-- ========================================================== imagination / hover reveal -->
+  <section id="imagination" class="section">
+    <div class="wrap">
+      <div class="compose-grid">
+        <div data-reveal>
+          <p class="eyebrow">03 — From imagination to composition</p>
+          <h2 class="h2" data-split>Two versions of the <span class="serif grad-text">same world.</span></h2>
+          <p class="lead" style="margin-top:18px">This is a real interaction from the studio: a moonlit frame over a sunlit one. Move your cursor across the panel — the tide pulls the daylight through. Your prompt does the same thing to a track.</p>
+          <div class="kv">
+            <div><span>Layer A</span><span>Moonlit descent (master)</span></div>
+            <div><span>Layer B</span><span>Daylight surface (reveal)</span></div>
+            <div><span>Response</span><span>Cursor-masked radial aperture</span></div>
+            <div><span>Applies to</span><span>Every generated track</span></div>
+          </div>
+        </div>
+        <div data-reveal data-reveal-delay="0.12">
+          <div class="reveal-panel" data-cursor-label="reveal">
+            <img class="day" src="assets/hero_day.jpg" alt="Daylight version of the Tidalia surface">
+            <img class="night" src="assets/hero_night.jpg" alt="Moonlit version of the Tidalia surface">
+            <div class="reveal-panel__top"><b>Hover to surface</b><span>· cursor aperture</span></div>
+            <div class="reveal-panel__badge">Night → Day</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ========================================================== finale (3D character) -->
+  <section id="finale" class="finale">
+    <div class="finale__canvas"><canvas id="finale-canvas" aria-hidden="true"></canvas></div>
+    <div class="grain"></div>
+    <div class="finale__ui">
+      <div class="wrap">
+        <div class="finale__copy">
+          <p class="eyebrow">04 — The conductor</p>
+          <h2 class="h2" data-split>Meet the octopus who <span class="serif grad-text">mixes your tide.</span></h2>
+          <p style="margin-top:18px">Eight arms, one pair of headphones, zero shame about the sub-bass. Build him from a mesh, and he’ll wear the glow ring that pulses with whatever you generate — turn the sound on and watch his eyes follow your cursor.</p>
+          <div class="finale__cta">
+            <a class="btn btn--primary" href="composer.html" data-nav data-magnetic><span class="dot"></span>Compose with him</a>
+            <button class="btn" data-sound-toggle>Tune the tide in</button>
+          </div>
+          <p class="small" style="margin-top:22px">Model: procedural Three.js geometry — no .glb required. Prefer your own character? Drop a file in <b>assets/models/</b> and the loader will pick it up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============================================================ footer -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="index.html" data-nav>
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span>Tidalia<small>Generative music studio</small></span>
+        </a>
+        <p class="small" style="max-width:34ch">A scroll-driven WebGL studio: one continuous 3D descent, six realms, and a soundtrack that is written every time you ask.</p>
+        <div class="footer__social">
+          <span class="tag">Three.js</span><span class="tag">WebAudio</span><span class="tag">No CDN</span>
+        </div>
+      </div>
+      <div>
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="composer.html" data-nav>Composer</a></li>
+          <li><a href="archive.html" data-nav>Archive</a></li>
+          <li><a href="#realms">Realms</a></li>
+          <li><a href="index.html#imagination">Imagination → composition</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>The journey</h4>
+        <ul>
+          <li><a href="#hero">The descent</a></li>
+          <li><a href="#manifesto">Behind the synthesis</a></li>
+          <li><a href="#finale">The conductor</a></li>
+          <li><a href="#realms">Six realms</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Your library</h4>
+        <ul>
+          <li><a href="archive.html" data-nav>Saved tracks · <span data-store-count>0</span></a></li>
+          <li><a href="composer.html?realm=lagoon" data-nav>Cassette Lagoon</a></li>
+          <li><a href="composer.html?realm=ice" data-nav>Ice Cathedral</a></li>
+          <li><a href="composer.html?realm=reef" data-nav>Reef of Echoes</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> Tidalia — a demo studio built with Three.js + WebAudio.</span>
+      <span class="status"><i></i>All systems: composing</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================ sound toggle -->
+<button class="sound" id="sound-toggle" aria-pressed="false" aria-label="Toggle the ambient soundtrack">
+  <span class="sound__icon">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h3.2L12 19V5L7.2 9H4zm11.5-1.4a5.5 5.5 0 010 8.8v-1.9a3.6 3.6 0 000-5v-1.9zm2.6-2.5a9 9 0 010 13.8v-1.9a7.1 7.1 0 000-10V5.1z"/></svg>
+  </span>
+  <span class="sound__label">Sound off</span>
+  <span class="sound__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+</button>
+
+<!-- ============================================================ realm modal -->
+<div class="modal" id="realm-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-name">
+  <div class="modal__inner">
+    <button class="modal__close" data-modal-close aria-label="Close realm">
+      <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" fill="none" stroke-width="1.7"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="modal__media"><img data-modal-img src="assets/realms/reef.jpg" alt=""></div>
+    <div class="modal__body">
+      <p class="eyebrow" data-modal-index>Realm 01 / 06</p>
+      <h3 class="h2" id="modal-name" data-modal-name>Reef of Echoes</h3>
+      <p class="lead" style="margin-top:14px" data-modal-desc></p>
+      <div class="pill-list" data-modal-tags></div>
+      <div class="modal__grid" data-modal-stats></div>
+      <div class="realm__actions">
+        <a class="btn btn--primary" data-modal-compose href="composer.html?realm=reef" data-nav><span class="dot"></span>Compose in this realm</a>
+        <button class="btn" data-modal-close>Keep exploring</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="vendor/three.min.js"></script>
+<script src="js/core.js"></script>
+<script src="js/config.js"></script>
+<script src="js/cursor.js"></script>
+<script src="js/reveals.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/pages.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/character.js"></script>
+<script src="js/orb.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
