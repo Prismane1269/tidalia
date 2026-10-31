@@ -1,5 +1,7 @@
 # Tidalia — a cinematic 3D music studio on the web
 
+> 🌐 **Live Website:** [https://prismane1269.github.io/tidalia/](https://prismane1269.github.io/tidalia/)
+
 A scroll-driven, WebGL-built website in the spirit of the "Build a Cinematic AI Website"
 tutorial: one continuous 3D descent, six generative realms, live-synthesised music, and a
 procedural 3D octopus who conducts the tide.
